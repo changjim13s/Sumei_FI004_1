@@ -9,10 +9,10 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\closedxml/0.87.1\\lib/net40/ClosedXML.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\csvhelper/16.0.0\\lib/net45/CsvHelper.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\documentformat.openxml/2.5.0\\lib/DocumentFormat.OpenXml.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.PlatformServices.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.calendar.v3/1.43.0.1872\\lib/net45/Google.Apis.Calendar.v3.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.core/1.43.0\\lib/net45/Google.Apis.Core.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.gmail.v1/1.43.0.1859\\lib/net45/Google.Apis.Gmail.v1.dll",
@@ -61,10 +61,10 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\nito.cancellation/1.1.0\\lib/netstandard2.0/Nito.Cancellation.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\nito.collections.deque/1.1.0\\lib/netstandard2.0/Nito.Collections.Deque.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\nito.disposables/2.2.0\\lib/net461/Nito.Disposables.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OOXML.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXml4Net.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\portable.bouncycastle/1.8.8\\lib/net40/BouncyCastle.Crypto.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\sharpziplib/1.2.0\\lib/net45/ICSharpCode.SharpZipLib.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\system.buffers/4.5.1\\lib/net461/System.Buffers.dll",
@@ -91,8 +91,8 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Microsoft.Vbe.Interop.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Office.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.Package.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.imageprocessing/21.10.2\\lib/net461/UiPath.ImageProcessingInterop.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Interop.Domino.UiPath.dll",
@@ -100,8 +100,8 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Microsoft.Office.Interop.Word.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Office.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.Package.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.MainSessionServer.Shared.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.ocr.activities/3.3.2\\lib/net461/UiPath.OCR.Activities.Design.dll",
@@ -117,18 +117,18 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.CV.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.CV.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UIAutomationCore.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UIAutomationNext.Activities.Design.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UIAutomationNext.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UIAutomationNext.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.Wizards.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Core.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.GoogleCloud.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Microsoft.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\JMCG\\.nuget\\packages\\logintosap.activities\\1.0.0"
     },
@@ -163,18 +163,18 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\csvhelper/16.0.0\\lib/net45/CsvHelper.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\documentformat.openxml/2.5.0\\lib/DocumentFormat.OpenXml.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\microsoft.visualstudio.ole.interop/16.7.30328.74\\lib/net45/Microsoft.VisualStudio.OLE.Interop.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OOXML.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXml4Net.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\sharpziplib/1.2.0\\lib/net45/ICSharpCode.SharpZipLib.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Microsoft.Office.Interop.Excel.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Microsoft.Vbe.Interop.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Office.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.Package.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.dll"
       ],
       "Path": "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities\\2.11.4"
@@ -185,10 +185,10 @@
         "Version": "1.12.3"
       },
       "Assemblies": [
-        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.PlatformServices.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.calendar.v3/1.43.0.1872\\lib/net45/Google.Apis.Calendar.v3.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.core/1.43.0\\lib/net45/Google.Apis.Core.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.gmail.v1/1.43.0.1859\\lib/net45/Google.Apis.Gmail.v1.dll",
@@ -228,8 +228,8 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Microsoft.Office.Interop.Word.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Office.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.Package.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.MainSessionServer.Shared.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.platform/21.10.0\\lib/net461/UiPath.Platform.dll",
@@ -317,18 +317,18 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.CV.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.CV.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UIAutomationCore.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UIAutomationNext.Activities.Design.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UIAutomationNext.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UIAutomationNext.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities/21.10.5\\lib/net461/UiPath.Wizards.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Core.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.GoogleCloud.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Microsoft.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5"
     }
@@ -1598,8 +1598,8 @@
         "Version": "1.43.0"
       },
       "Assemblies": [
-        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis\\1.43.0\\lib\\net45\\Google.Apis.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis\\1.43.0\\lib\\net45\\Google.Apis.PlatformServices.dll"
+        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis\\1.43.0\\lib\\net45\\Google.Apis.PlatformServices.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis\\1.43.0\\lib\\net45\\Google.Apis.dll"
       ],
       "Path": "C:\\Users\\JMCG\\.nuget\\packages\\google.apis\\1.43.0"
     },
@@ -1609,8 +1609,8 @@
         "Version": "1.43.0"
       },
       "Assemblies": [
-        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth\\1.43.0\\lib\\net45\\Google.Apis.Auth.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth\\1.43.0\\lib\\net45\\Google.Apis.Auth.PlatformServices.dll"
+        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth\\1.43.0\\lib\\net45\\Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth\\1.43.0\\lib\\net45\\Google.Apis.Auth.dll"
       ],
       "Path": "C:\\Users\\JMCG\\.nuget\\packages\\google.apis.auth\\1.43.0"
     },
@@ -2117,10 +2117,10 @@
         "Version": "2.4.1"
       },
       "Assemblies": [
-        "C:\\Users\\JMCG\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OOXML.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXml4Net.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXmlFormats.dll"
+        "C:\\Users\\JMCG\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.dll"
       ],
       "Path": "C:\\Users\\JMCG\\.nuget\\packages\\npoi\\2.4.1"
     },
@@ -2437,8 +2437,8 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\Microsoft.Vbe.Interop.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\Office.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\UiPath.Excel.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\UiPath.Excel.Activities.Package.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\UiPath.Excel.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\UiPath.Excel.dll"
       ],
       "Path": "C:\\Users\\JMCG\\.nuget\\packages\\uipath.excel.activities\\2.11.4"
@@ -2464,8 +2464,8 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\Microsoft.Office.Interop.Word.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\Office.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.Mail.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.Mail.Activities.Package.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.Mail.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.Mail.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.MainSessionServer.Shared.dll"
       ],
@@ -2535,11 +2535,11 @@
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\lib\\net461\\UiPath.CV.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\lib\\net461\\UiPath.CV.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\lib\\net461\\UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\lib\\net461\\UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\lib\\net461\\UiPath.UIAutomationCore.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\lib\\net461\\UiPath.UIAutomationNext.Activities.Design.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\lib\\net461\\UiPath.UIAutomationNext.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\lib\\net461\\UiPath.UIAutomationNext.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\lib\\net461\\UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\lib\\net461\\UiPath.Wizards.dll"
       ],
       "Path": "C:\\Users\\JMCG\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5"
@@ -2552,10 +2552,10 @@
       "Assemblies": [
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.Core.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.GoogleCloud.dll",
         "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.Microsoft.dll",
-        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\JMCG\\.nuget\\packages\\uipath.vision\\3.1.4"
     }

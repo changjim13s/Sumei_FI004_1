@@ -141,7 +141,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ExecuteQuery CommandType="Text" ContinueOnError="True" DataTable="[GT_DATA]" DisplayName="Execute Query" ExistingDbConnection="[dbconn]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[&quot;SELECT TOP (100)  * FROM [&quot;+DB_NAME.ToString+&quot;].[dbo].[&quot;+TABLE_NAME.ToString+&quot;]  where MANDT = '&quot;+CLIENT+&quot;'  AND ( belnr = '' or BELNR is null)  &quot;]" TimeoutMS="2000">
+                <ui:ExecuteQuery CommandType="Text" ContinueOnError="True" DataTable="[GT_DATA]" DisplayName="Execute Query" ExistingDbConnection="[dbconn]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[&quot;SELECT TOP (100)  * FROM [&quot;+DB_NAME.ToString+&quot;].[dbo].[&quot;+TABLE_NAME.ToString+&quot;]  where MANDT = '&quot;+CLIENT+&quot;'   AND ( belnr = '' or BELNR is null)  &quot;]" TimeoutMS="2000">
                   <ui:ExecuteQuery.Parameters>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:ExecuteQuery.Parameters>

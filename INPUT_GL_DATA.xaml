@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>831.2,3122.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>811.2,2938.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>INPUT_GL_DATA_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -73,16 +73,17 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="GL總帳快速輸入&#xA;" DisplayName="INPUT_GL_DATA" sap:VirtualizedContainerService.HintSize="841.6,3057.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="GL總帳快速輸入&#xA;" DisplayName="INPUT_GL_DATA" sap:VirtualizedContainerService.HintSize="791.2,2873.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[LT_GL Is Nothing OrElse LT_GL.Rows.Count = 0]" sap:VirtualizedContainerService.HintSize="800,2922.4" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[LT_GL Is Nothing OrElse LT_GL.Rows.Count = 0]" sap:VirtualizedContainerService.HintSize="749.6,2738.4" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -93,9 +94,13 @@
         <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230.4,61.6" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="無GL總帳快速輸入資料" />
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="525.6,2764" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence sap:VirtualizedContainerService.HintSize="475.2,2580" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <Sequence.Variables>
-            <Variable x:TypeArguments="x:Int32" Default="0" Name="WA_IND" />
+            <Variable x:TypeArguments="x:Int32" Name="WA_IND">
+              <Variable.Default>
+                <Literal x:TypeArguments="x:Int32" />
+              </Variable.Default>
+            </Variable>
             <Variable x:TypeArguments="x:String" Name="msg_type" />
             <Variable x:TypeArguments="x:String" Name="msg_text" />
             <Variable x:TypeArguments="s:String[]" Name="MSG_DATA" />
@@ -106,7 +111,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ucas:ClickToolbarButton DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" ContinueOnError="True" DisplayName="點擊「總帳快速輸入」" sap:VirtualizedContainerService.HintSize="484,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="呼叫快速輸入   (Shift+F8)">
+          <ucas:ClickToolbarButton DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" ContinueOnError="True" DisplayName="點擊「總帳快速輸入」" sap:VirtualizedContainerService.HintSize="433.6,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="呼叫快速輸入   (Shift+F8)">
             <ucas:ClickToolbarButton.Items>
               <scg:List x:TypeArguments="x:String" Capacity="16">
                 <x:String xml:space="preserve">顯示文件概觀   (Shift+F2)</x:String>
@@ -121,7 +126,7 @@
               </scg:List>
             </ucas:ClickToolbarButton.Items>
             <ucas:ClickToolbarButton.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c9474ac-08a6-43f6-90ba-154bc07f0a99" InformativeScreenshot="9a451b1cdde4d7a0ac275cac1d4340fd" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='輸入 BPM費用請款-外掛(SM): 新增 供應商項目' /&gt;&lt;sap id='tbar[1]/btn[20]' /&gt;" TimeoutMS="1000">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c9474ac-08a6-43f6-90ba-154bc07f0a99" InformativeScreenshot="d7eab277fd3fd2d7d8c908fc597fd9bd" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='輸入 BPM費用請款-外掛(SM): 新增 供應商項目' /&gt;&lt;sap id='tbar[1]/btn[20]' /&gt;" TimeoutMS="1000">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
@@ -134,29 +139,32 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ucas:ClickToolbarButton>
-          <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageText="{x:Null}" DisplayName="Read Status Bar 'Statusbar  sbar'" sap:VirtualizedContainerService.HintSize="484,268" sap2010:WorkflowViewState.IdRef="ReadStatusbar_2" MessageType="[msg_type]">
+          <ucas:ReadStatusbar MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" ContinueOnError="True" DisplayName="Read Status Bar 'Statusbar  sbar'" sap:VirtualizedContainerService.HintSize="433.6,268" sap2010:WorkflowViewState.IdRef="ReadStatusbar_2" MessageText="[msg_text]" MessageType="[msg_type]">
             <ucas:ReadStatusbar.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="daaf520a-8924-4dc5-8b00-3e3121972862" InformativeScreenshot="bd746e07a297ee8d9eb3e6c187499d67" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='SAP 輕鬆存取' /&gt;&lt;sap id='sbar' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="daaf520a-8924-4dc5-8b00-3e3121972862" InformativeScreenshot="bd746e07a297ee8d9eb3e6c187499d67" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='SAP 輕鬆存取' /&gt;&lt;sap id='sbar' /&gt;" TimeoutMS="1000">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
               </ui:Target>
             </ucas:ReadStatusbar.Target>
           </ucas:ReadStatusbar>
-          <If Condition="[msg_type = &quot;W&quot;]" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[msg_type = &quot;W&quot;]" sap:VirtualizedContainerService.HintSize="433.6,52" sap2010:WorkflowViewState.IdRef="If_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <ui:InterruptibleDoWhile Condition="[msg_type = &quot;W&quot;]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+              <ui:InterruptibleDoWhile Condition="[msg_type = &quot;W&quot;]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="410.4,720" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                 <ui:InterruptibleDoWhile.Body>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,549" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,554.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="按ENTER" sap:VirtualizedContainerService.HintSize="334,152" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="按ENTER" sap:VirtualizedContainerService.HintSize="333.6,153.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
                       <ui:SendHotkey.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4abf2e13-9fbe-470a-9883-5c794589a194" InformativeScreenshot="13b650b69657e25e2937528e4fd3a9f8" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap omit:id='usr/ctxt[13]' /&gt;" TimeoutMS="1000">
                           <ui:Target.WaitForReady>
@@ -171,7 +179,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:SendHotkey>
-                    <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageText="{x:Null}" DisplayName="Read Status Bar 'Statusbar  sbar'" sap:VirtualizedContainerService.HintSize="334,265" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageType="[msg_type]">
+                    <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" DisplayName="Read Status Bar 'Statusbar  sbar'" sap:VirtualizedContainerService.HintSize="333.6,268" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[msg_text]" MessageType="[msg_type]">
                       <ucas:ReadStatusbar.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="daaf520a-8924-4dc5-8b00-3e3121972862" InformativeScreenshot="bd746e07a297ee8d9eb3e6c187499d67" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='SAP 輕鬆存取' /&gt;&lt;sap id='sbar' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -187,7 +195,7 @@
                 </ui:InterruptibleDoWhile.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -203,13 +211,13 @@
               </Sequence>
             </If.Else>
           </If>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="輸入每筆GL項目" DataTable="[LT_GL]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="484,1875" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="輸入每筆GL項目" DataTable="[LT_GL]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,1886.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="WA_GL" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1724" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,1735.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Int32" Name="LV_NEX_IND" />
                   </Sequence.Variables>
@@ -219,7 +227,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap2010:Annotation.AnnotationText="內文在第2行" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="333.6,91.2" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[LV_NEX_IND]</OutArgument>
                     </Assign.To>
@@ -232,61 +240,61 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;輸入:&quot;+WA_GL.Item(&quot;NEWKO&quot;).ToString]" />
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="過帳碼" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;NEWBS&quot;).ToString]">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;輸入:&quot;+WA_GL.Item(&quot;NEWKO&quot;).ToString]" />
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="過帳碼" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;NEWBS&quot;).ToString]">
                     <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c0a93c48-3faf-4817-a576-137d4ebf4516" InformativeScreenshot="7f12b1e0cb0855fa0e42f91f413c2214" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='usr/sub/1/ctxt[&quot;+WA_IND .ToString+&quot;,0]' /&gt;&quot;]" TimeoutMS="1000">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c0a93c48-3faf-4817-a576-137d4ebf4516" InformativeScreenshot="6ae40a5523f8a2558952cf7c1effa46b" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='輸入 BPM費用請款-外掛(SM): 新增 總帳科目項目' /&gt;&lt;sap id='usr/sub:SAPMF05A:8500/ctxtBSEG-BSCHL[&quot;+WA_IND.ToString+&quot;,0]' /&gt;&quot;]" TimeoutMS="1000">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:TypeInto.Target>
                   </ui:TypeInto>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="科目" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;NEWKO&quot;).ToString]">
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="科目" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;NEWKO&quot;).ToString]">
                     <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="862a9683-3a2e-4a55-8b9f-3ea8aba4536c" InformativeScreenshot="1a7035de5b65a4d9d52932bbb8a7a147" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='usr/sub/1/ctxt[&quot;+WA_IND .ToString+&quot;,3]' /&gt;&quot;]" TimeoutMS="1000">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="862a9683-3a2e-4a55-8b9f-3ea8aba4536c" InformativeScreenshot="e14ce44c2a49ccbc7570c7d11d3b49ae" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='輸入 BPM費用請款-外掛(SM): 新增 總帳科目項目' /&gt;&lt;sap id='usr/sub:SAPMF05A:8500/ctxtRF05A-KONTO[&quot;+WA_IND.ToString+&quot;,3]' /&gt;&quot;]" TimeoutMS="1000">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:TypeInto.Target>
                   </ui:TypeInto>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="金額" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;WRBTR&quot;).ToString]">
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="金額" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;WRBTR&quot;).ToString]">
                     <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8f7aba6-a007-4477-b2aa-9ab25e2e4bdb" InformativeScreenshot="9787e7dbaf308028646987fddd5c639d" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='usr/sub/1/txt[&quot;+WA_IND .ToString+&quot;,12]' /&gt;&quot;]" TimeoutMS="1000">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8f7aba6-a007-4477-b2aa-9ab25e2e4bdb" InformativeScreenshot="15589ce6adcf334df6770eacb17842ff" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='輸入 BPM費用請款-外掛(SM): 新增 總帳科目項目' /&gt;&lt;sap id='usr/sub:SAPMF05A:8500/txtBSEG-WRBTR[&quot;+WA_IND.ToString+&quot;,12]' /&gt;&quot;]" TimeoutMS="1000">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:TypeInto.Target>
                   </ui:TypeInto>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="成本中心" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;KOSTL&quot;).ToString]">
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="成本中心" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;KOSTL&quot;).ToString]">
                     <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="16ae181c-beff-4a0d-afb8-fe6f173bfbb1" InformativeScreenshot="782fe9eee7498a7e2534f52e14e3a1ac" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='usr/sub/1/ctxt[&quot;+WA_IND .ToString+&quot;,23]' /&gt;&quot;]" TimeoutMS="1000">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="16ae181c-beff-4a0d-afb8-fe6f173bfbb1" InformativeScreenshot="e8887990be4b8d606bbf7a77b65be002" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='輸入 BPM費用請款-外掛(SM): 新增 總帳科目項目' /&gt;&lt;sap id='usr/sub:SAPMF05A:8500/ctxtBSEG-KOSTL[&quot;+WA_IND.ToString+&quot;,23]' /&gt;&quot;]" TimeoutMS="1000">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:TypeInto.Target>
                   </ui:TypeInto>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="稅碼" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;MWSKZ&quot;).ToString]">
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="稅碼" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;MWSKZ&quot;).ToString]">
                     <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fa5f1ff2-1407-4468-9144-26031585ab1e" InformativeScreenshot="a2b7f0567b3d8fc6dbf6710a4ff74107" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='usr/sub/1/ctxt[&quot;+WA_IND .ToString+&quot;,34]' /&gt;&quot;]" TimeoutMS="1000">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fa5f1ff2-1407-4468-9144-26031585ab1e" InformativeScreenshot="3c9ad7ce08b37158e28553a1c24a90f2" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='輸入 BPM費用請款-外掛(SM): 新增 總帳科目項目' /&gt;&lt;sap id='usr/sub:SAPMF05A:8500/ctxtBSEG-MWSKZ[&quot;+WA_IND.ToString+&quot;,34]' /&gt;&quot;]" TimeoutMS="1000">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:TypeInto.Target>
                   </ui:TypeInto>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                     <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,226" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,228" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="訂單號碼" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;EBELN&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="訂單號碼" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;EBELN&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="686475db-d39e-4adb-a26e-e05307b261cf" InformativeScreenshot="e072bd4f54529fbd1bc632d3d2cffde0" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='輸入 BPM費用請款-外掛(SM): 新增 總帳科目項目' /&gt;&lt;sap id='usr/sub/1/ctxt[&quot;+WA_IND .ToString+&quot;,44]' /&gt;&quot;]" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
@@ -304,25 +312,25 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:CommentOut>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="指派" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;XBLNR&quot;).ToString]">
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="指派" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;XBLNR&quot;).ToString]">
                     <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b0972a51-970a-47f5-8530-b044235ef5e7" InformativeScreenshot="e1c8bf8ee932bebaf9bf61c111a307ba" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='usr/sub/1/txt[&quot;+WA_IND .ToString+&quot;,37]' /&gt;&quot;]" TimeoutMS="1000">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b0972a51-970a-47f5-8530-b044235ef5e7" InformativeScreenshot="2d91f81ed382ac7066f19bf848e1bd9b" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='輸入 BPM費用請款-外掛(SM): 新增 總帳科目項目' /&gt;&lt;sap id='usr/sub:SAPMF05A:8500/txtBSEG-ZUONR[&quot;+WA_IND.ToString+&quot;,37]' /&gt;&quot;]" TimeoutMS="1000">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:TypeInto.Target>
                   </ui:TypeInto>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="內文" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_8" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;SGTXT&quot;).ToString]">
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="內文" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_8" SendWindowMessages="False" SimulateType="True" Text="[WA_GL.Item(&quot;SGTXT&quot;).ToString]">
                     <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="63db7cf2-802b-4b8c-8e2f-a406627d39b7" InformativeScreenshot="7221657886cfddd44cf0143c6edb6fd2" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='usr/sub/1/ctxt[&quot;+WA_IND.ToString+&quot;,52]' /&gt;&quot;]" TimeoutMS="1000">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="63db7cf2-802b-4b8c-8e2f-a406627d39b7" InformativeScreenshot="91bcd298f3588ef887443745b9af4a85" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='輸入 BPM費用請款-外掛(SM): 新增 總帳科目項目' /&gt;&lt;sap id='usr/sub:SAPMF05A:8500/ctxtBSEG-SGTXT[&quot;+WA_IND.ToString+&quot;,52]' /&gt;&quot;]" TimeoutMS="1000">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:TypeInto.Target>
                   </ui:TypeInto>
-                  <Assign sap2010:Annotation.AnnotationText="內文在第2行" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="333.6,91.2" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[WA_IND]</OutArgument>
                     </Assign.To>
