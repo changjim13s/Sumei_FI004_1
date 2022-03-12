@@ -10,7 +10,7 @@
     <x:Property Name="DB_NAME" Type="InArgument(x:String)" />
     <x:Property Name="TABLE_NAME" Type="InArgument(x:String)" />
     <x:Property Name="ProcessError" Type="InArgument(s:Exception)" />
-    <x:Property Name="SAP_WIND" Type="InOutArgument(ui:Window)" />
+    <x:Property Name="SAP_WIND" Type="OutArgument(ui:Window)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -127,7 +127,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ucas:Logon ConnectionName="[CONNT_NAME]" DelayBetweenRetries="5000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Logon_2" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" Window="[SAP_WIND]">
+          <ucas:Logon ConnectionName="[CONNT_NAME]" DelayBetweenRetries="5000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Logon_2" Retries="2" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" Window="[SAP_WIND]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -135,7 +135,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ucas:Logon>
-          <ucas:Login SecurePassword="{x:Null}" Client="[CLIENT]" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Login_2" IsSecure="False" Language="[LANGU]" MultiLogonOptionToChoose="Multiple" Password="[PASSWORD]" Timeout="5000" Username="[ID]" Window="[sapsession]">
+          <ucas:Login SecurePassword="{x:Null}" Client="[CLIENT]" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Login_2" IsSecure="False" Language="[LANGU]" MultiLogonOptionToChoose="Multiple" Password="[PASSWORD]" Timeout="5000" Username="[ID]" Window="[SAP_WIND]">
             <ucas:Login.Target>
               <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[SAP_WIND]" Id="fe6da483-fa92-4f65-9004-0c6240b878db" InformativeScreenshot="bf063e577ec22e071ee412baef99c21a" TimeoutMS="3000">
                 <ui:Target.WaitForReady>

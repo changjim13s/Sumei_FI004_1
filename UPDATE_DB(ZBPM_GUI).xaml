@@ -94,7 +94,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[LV_BKTXT &lt;&gt; &quot;&quot; AND GV_BELNR &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="483.2,524.8" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[LV_BKTXT &lt;&gt; &quot;&quot; AND GV_BELNR &lt;&gt; &quot;&quot; and GUI_FLAG = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="483.2,524.8" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="375.2,336.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>

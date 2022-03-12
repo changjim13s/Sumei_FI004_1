@@ -261,7 +261,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">380,741.6 380,788.4</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="登入SAP" DisplayName="open_sap" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="RPA_to_MIGO.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="登入SAP" DisplayName="open_sap" sap:VirtualizedContainerService.HintSize="333.6,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="RPA_to_MIGO.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InOutArgument x:TypeArguments="sd:DataTable" x:Key="GT_DATA">
                                 <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="GT_DATA" />
@@ -293,9 +293,9 @@
                               <InArgument x:TypeArguments="s:Exception" x:Key="ProcessError">
                                 <mva:VisualBasicValue x:TypeArguments="s:Exception" ExpressionText="ProcessError" />
                               </InArgument>
-                              <InOutArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">
+                              <OutArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">
                                 <mva:VisualBasicReference x:TypeArguments="ui:Window" ExpressionText="SAP_WIND" />
-                              </InOutArgument>
+                              </OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -313,7 +313,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">380,871.6 380,918.4</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="執行F-43 F-47" CurrentIndex="[ind_head]" DataTable="[GT_HEAD]" DisplayName="依BPM請款單號LOOP" sap:VirtualizedContainerService.HintSize="941.6,4099.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                              <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="執行F-43 F-47" CurrentIndex="[ind_head]" DataTable="[GT_HEAD]" DisplayName="依BPM請款單號LOOP" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                                 <ui:ForEachRow.Body>
                                   <ActivityAction x:TypeArguments="sd:DataRow">
                                     <ActivityAction.Argument>
@@ -492,33 +492,15 @@
                                       </TryCatch>
                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="輸入表頭及過帳碼31的項次" DisplayName="INPUT_HEAD_DATA workflow" sap:VirtualizedContainerService.HintSize="866.4,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="INPUT_HEAD_DATA.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="LV_HEAD">
-                                            <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="lv_head" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="LT_ONE">
-                                            <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="LT_ONE" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="LV_BKTXT">
-                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LV_BKTXT" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="GT_DATA">
-                                            <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="GT_DATA" />
-                                          </InArgument>
-                                          <InOutArgument x:TypeArguments="x:String" x:Key="GV_BELNR">
-                                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="GV_BELNR" />
-                                          </InOutArgument>
-                                          <InOutArgument x:TypeArguments="x:String" x:Key="ONE_FLAG">
-                                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ONE_FLAG" />
-                                          </InOutArgument>
-                                          <InOutArgument x:TypeArguments="x:String" x:Key="msg_type">
-                                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="msg_type" />
-                                          </InOutArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="msg_text">
-                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="msg_text" />
-                                          </InArgument>
-                                          <InOutArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">
-                                            <mva:VisualBasicReference x:TypeArguments="ui:Window" ExpressionText="SAP_WIND" />
-                                          </InOutArgument>
+                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="LV_HEAD">[lv_head]</InArgument>
+                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="LT_ONE">[LT_ONE]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="LV_BKTXT">[LV_BKTXT]</InArgument>
+                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="GT_DATA">[GT_DATA]</InArgument>
+                                          <InOutArgument x:TypeArguments="x:String" x:Key="GV_BELNR">[GV_BELNR]</InOutArgument>
+                                          <InOutArgument x:TypeArguments="x:String" x:Key="ONE_FLAG">[ONE_FLAG]</InOutArgument>
+                                          <InOutArgument x:TypeArguments="x:String" x:Key="msg_type">[msg_type]</InOutArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="msg_text">[msg_text]</InArgument>
+                                          <InOutArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">[SAP_WIND]</InOutArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -542,27 +524,13 @@
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="輸入其他項目:&#xA;過帳碼40+無特殊總帳 =稅項&#xA;過帳碼29+特殊總帳T =暫付款&#xA;過帳碼29+特殊總帳A =單邊分路 預付款" DisplayName="INPUT_OTHERS_DATA workflow" sap:VirtualizedContainerService.HintSize="333.6,185.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_44" UnSafe="False" WorkflowFileName="INPUT_OTHERS_DATA.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
-                                                      <InArgument x:TypeArguments="sd:DataTable" x:Key="LT_OTHERS">
-                                                        <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="LT_OTHERS" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="sd:DataTable" x:Key="LV_HEAD">
-                                                        <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="LV_HEAD" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:Int32" x:Key="ind_head">
-                                                        <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="ind_head" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="ONE_FLAG">
-                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ONE_FLAG" />
-                                                      </InArgument>
-                                                      <InOutArgument x:TypeArguments="x:String" x:Key="msg_type">
-                                                        <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="msg_type" />
-                                                      </InOutArgument>
-                                                      <InOutArgument x:TypeArguments="x:String" x:Key="msg_text">
-                                                        <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="msg_text" />
-                                                      </InOutArgument>
-                                                      <InArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">
-                                                        <mva:VisualBasicValue x:TypeArguments="ui:Window" ExpressionText="SAP_WIND" />
-                                                      </InArgument>
+                                                      <InArgument x:TypeArguments="sd:DataTable" x:Key="LT_OTHERS">[LT_OTHERS]</InArgument>
+                                                      <InArgument x:TypeArguments="sd:DataTable" x:Key="LV_HEAD">[LV_HEAD]</InArgument>
+                                                      <InArgument x:TypeArguments="x:Int32" x:Key="ind_head">[ind_head]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="ONE_FLAG">[ONE_FLAG]</InArgument>
+                                                      <InOutArgument x:TypeArguments="x:String" x:Key="msg_type">[msg_type]</InOutArgument>
+                                                      <InOutArgument x:TypeArguments="x:String" x:Key="msg_text">[msg_text]</InOutArgument>
+                                                      <InArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">[SAP_WIND]</InArgument>
                                                     </ui:InvokeWorkflowFile.Arguments>
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
