@@ -114,7 +114,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Private: Find Element 'saplogon.exe  進項資料維護視窗'" FoundElement="[ele_gui_wind]" sap:VirtualizedContainerService.HintSize="1968.8,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
       <ui:WaitUiElementAppear.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="715c0bd0-9eda-4ce3-9990-958d7dffd37c" InformativeScreenshot="5082d1f892ce879075bed8aa12be2250" Selector="&lt;wnd app='saplogon.exe' idx='*' aaname='進項資料維護視窗' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="715c0bd0-9eda-4ce3-9990-958d7dffd37c" InformativeScreenshot="5082d1f892ce879075bed8aa12be2250" Selector="&lt;wnd app='saplogon.exe' idx='*' aaname='*進項資料維護視窗' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
       </ui:WaitUiElementAppear.Target>
     </ui:WaitUiElementAppear>
     <If Condition="[IsNothing(ele_gui_wind)]" sap:VirtualizedContainerService.HintSize="1968.8,5502.4" sap2010:WorkflowViewState.IdRef="If_8">
@@ -648,7 +648,7 @@
                 <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="432,61.6" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;無&quot;+LV_BKTXT+&quot;相關資料或無GUI視窗&quot;]" />
                 <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="站存並離開" sap:VirtualizedContainerService.HintSize="432,153.6" sap2010:WorkflowViewState.IdRef="SendHotkey_15" Key="esc" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
                   <ui:SendHotkey.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be4694af-3e67-47fe-81da-36ee5364c3b5" InformativeScreenshot="5a3afe21012c95f5401b265f20b29e2a" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='進項資料維護視窗' idx='*' /&gt;" TimeoutMS="2000">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be4694af-3e67-47fe-81da-36ee5364c3b5" InformativeScreenshot="5a3afe21012c95f5401b265f20b29e2a" Selector="&lt;wnd app='saplogon.exe' idx='*' aaname='*進項資料維護視窗' /&gt;" TimeoutMS="2000">
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
