@@ -24,7 +24,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2000,5838.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2007,5817</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GUI_INVNO_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -66,7 +66,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="56">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -95,9 +95,10 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="ZBPM_GUI發票介面輸入" DisplayName="GUI_INVNO" sap:VirtualizedContainerService.HintSize="2010.4,5773.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="ZBPM_GUI發票介面輸入" DisplayName="GUI_INVNO" sap:VirtualizedContainerService.HintSize="2017,5752" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="GT_DATA" />
       <Variable x:TypeArguments="s:Exception" Name="GV_ERROR" />
@@ -112,24 +113,24 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Private: Find Element 'saplogon.exe  進項資料維護視窗'" FoundElement="[ele_gui_wind]" sap:VirtualizedContainerService.HintSize="1968.8,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+    <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Private: Find Element 'saplogon.exe  進項資料維護視窗'" FoundElement="[ele_gui_wind]" sap:VirtualizedContainerService.HintSize="1975,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
       <ui:WaitUiElementAppear.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="715c0bd0-9eda-4ce3-9990-958d7dffd37c" InformativeScreenshot="5082d1f892ce879075bed8aa12be2250" Selector="&lt;wnd app='saplogon.exe' idx='*' aaname='進項資料維護視窗' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="715c0bd0-9eda-4ce3-9990-958d7dffd37c" InformativeScreenshot="5082d1f892ce879075bed8aa12be2250" Selector="&lt;wnd app='saplogon.exe' cls='#32770' idx='*' aaname='*進項資料維護視窗*' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
       </ui:WaitUiElementAppear.Target>
     </ui:WaitUiElementAppear>
-    <If Condition="[IsNothing(ele_gui_wind)]" sap:VirtualizedContainerService.HintSize="1968.8,5502.4" sap2010:WorkflowViewState.IdRef="If_8">
+    <If Condition="[IsNothing(ele_gui_wind)]" sap:VirtualizedContainerService.HintSize="1975,5483" sap2010:WorkflowViewState.IdRef="If_8">
       <If.Then>
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230.4,61.6" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[&quot;無&quot;+LV_BKTXT+&quot;相關資料或無GUI視窗&quot;]" />
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="233,61" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[&quot;無&quot;+LV_BKTXT+&quot;相關資料或無GUI視窗&quot;]" />
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="1694.4,5344" sap2010:WorkflowViewState.IdRef="Sequence_43">
+        <Sequence sap:VirtualizedContainerService.HintSize="1697,5325" sap2010:WorkflowViewState.IdRef="Sequence_43">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DB_CONNECT(ZBPM_GUI) workflow" sap:VirtualizedContainerService.HintSize="1652.8,112.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="DB_CONNECT(ZBPM_GUI).xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DB_CONNECT(ZBPM_GUI) workflow" sap:VirtualizedContainerService.HintSize="1655,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="DB_CONNECT(ZBPM_GUI).xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InOutArgument x:TypeArguments="sd:DataTable" x:Key="gt_data">[GT_DATA]</InOutArgument>
               <InOutArgument x:TypeArguments="x:String" x:Key="DB_NAME">[DB_NAME]</InOutArgument>
@@ -144,9 +145,9 @@
               <InOutArgument x:TypeArguments="x:String" x:Key="LV_BKTXT">[LV_BKTXT]</InOutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <If Condition="[LT_GUIS.Rows.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="1652.8,5098.4" sap2010:WorkflowViewState.IdRef="If_9">
+          <If Condition="[LT_GUIS.Rows.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="1655,5081" sap2010:WorkflowViewState.IdRef="If_9">
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="1135.2,4940" sap2010:WorkflowViewState.IdRef="Sequence_58">
+              <Sequence sap:VirtualizedContainerService.HintSize="1136,4923" sap2010:WorkflowViewState.IdRef="Sequence_58">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Default="0" Name="ind_wa" />
                   <Variable x:TypeArguments="x:Int32" Default="0" Name="LV_IND" />
@@ -158,7 +159,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1093.6,101.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1094,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -178,13 +179,13 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:MultipleAssign>
-                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[LT_GUIS]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1093.6,1951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[LT_GUIS]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1094,1939" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="wa" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="375.2,1831.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                      <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="376,1819" sap2010:WorkflowViewState.IdRef="Sequence_50">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="LV_TEXT" />
                         </Sequence.Variables>
@@ -193,8 +194,8 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[WA.Item(&quot;INVNO&quot;).ToString]" />
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '憑證日期'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_15" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;GUIDATE&quot;).ToString]">
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[WA.Item(&quot;INVNO&quot;).ToString]" />
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '憑證日期'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_15" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;GUIDATE&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8d42ec4b-7ead-4eb9-9443-1ab6e3a51d43" InformativeScreenshot="a9fdf92ac0e326feb89cd23e1f87d7a9" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='文件日期' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
@@ -203,7 +204,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '申報日期'" EmptyField="False" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_16" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;GUIDATE&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '申報日期'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_16" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;GUIDATE&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e00e1773-e790-48a7-98d5-2680364b0468" InformativeScreenshot="3469ba500b16d1a71f2506f70daa82ce" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='申報日期' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
@@ -212,7 +213,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '憑證號碼'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_17" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;INVNO&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '憑證號碼'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_17" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;INVNO&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7ba0f8a1-9d27-4b30-8fcb-32c3718bd6cd" InformativeScreenshot="b03f9a70d21494933c95ad0d3610d655" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableCol='4' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
@@ -221,61 +222,61 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '格式'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_18" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;GUIFORMAT&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '格式'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_18" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;GUIFORMAT&quot;).ToString]">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="df6e2b7f-6180-4a99-882b-49b096cec03f" InformativeScreenshot="3b6aaf9ac3b709829190dde898a36759" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='Gui format for input' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="df6e2b7f-6180-4a99-882b-49b096cec03f" InformativeScreenshot="3b6aaf9ac3b709829190dde898a36759" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='Gui format for input' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableCol='5' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                               </ui:Target.WaitForReady>
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '統一編號'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_19" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;VATCODE&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '統一編號'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_19" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;VATCODE&quot;).ToString]">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="703e9684-7c46-42c9-b6ee-f35abc26aa21" InformativeScreenshot="1799d9e834b9d067a79aca19b1b238b1" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='VAT number for customer/vendor' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="703e9684-7c46-42c9-b6ee-f35abc26aa21" InformativeScreenshot="1799d9e834b9d067a79aca19b1b238b1" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='VAT number for customer/vendor' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableCol='6'  tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                               </ui:Target.WaitForReady>
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '銷售額'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_20" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;TXBHW&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '銷售額'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_20" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;TXBHW&quot;).ToString]">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f211db2f-2ca2-42f6-bde9-bcf38a553267" InformativeScreenshot="cdedf6fe5b68b9d6f56e741283a9f51d" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='LC 稅基金額' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f211db2f-2ca2-42f6-bde9-bcf38a553267" InformativeScreenshot="cdedf6fe5b68b9d6f56e741283a9f51d" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='LC 稅基金額' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableCol='7'  tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                               </ui:Target.WaitForReady>
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '稅額'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_21" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;MWSTS&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '稅額'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_21" SendWindowMessages="False" SimulateType="True" Text="[WA.Item(&quot;MWSTS&quot;).ToString]">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dc4b9ced-1c31-4c5f-9b4a-448c468dfd23" InformativeScreenshot="2d41e0c261427abca233a4c7d3fdfabe" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='本國貨幣稅額' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dc4b9ced-1c31-4c5f-9b4a-448c468dfd23" InformativeScreenshot="2d41e0c261427abca233a4c7d3fdfabe" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='本國貨幣稅額' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableCol='8'  tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                               </ui:Target.WaitForReady>
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '稅分類 check'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_22" SendWindowMessages="False" SimulateType="True" Text="1">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '稅分類 check'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_22" SendWindowMessages="False" SimulateType="True" Text="1">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4d5ccaae-3ed7-4347-ab0f-5b472540d3f5" InformativeScreenshot="d649cde543f4881c074b7e9c3876ead4" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='Tax type' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4d5ccaae-3ed7-4347-ab0f-5b472540d3f5" InformativeScreenshot="d649cde543f4881c074b7e9c3876ead4" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='Tax type' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableCol='10'  tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                               </ui:Target.WaitForReady>
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '扣抵代號 check'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_23" SendWindowMessages="False" SimulateType="True" Text="1">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into '扣抵代號 check'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_23" SendWindowMessages="False" SimulateType="True" Text="1">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4d5ccaae-3ed7-4347-ab0f-5b472540d3f5" InformativeScreenshot="952aec2eecf33143a9e44defb14cc5cf" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='Assets or Material indicator' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4d5ccaae-3ed7-4347-ab0f-5b472540d3f5" InformativeScreenshot="952aec2eecf33143a9e44defb14cc5cf" Selector="[&quot;&lt;wnd app='saplogon.exe' cls='#32770' omit:title='進項資料維護視窗' idx='*' /&gt;&lt;sap colTooltip='Assets or Material indicator' id='usr/tblSAPLZACCG_TWGUI_VGL01FG81CTRL100'  tableCol='11' tableRow='&quot;+ind_wa.ToString+&quot;' /&gt;&quot;]" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                               </ui:Target.WaitForReady>
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[ind_wa]</OutArgument>
                           </Assign.To>
@@ -293,7 +294,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ForEachRow>
-                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="全選項目" sap:VirtualizedContainerService.HintSize="1093.6,153.6" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="f5" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="全選項目" sap:VirtualizedContainerService.HintSize="1094,152" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="f5" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
                   <ui:SendHotkey.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be4694af-3e67-47fe-81da-36ee5364c3b5" InformativeScreenshot="5a3afe21012c95f5401b265f20b29e2a" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='*' idx='*' /&gt;" TimeoutMS="2000">
                       <ui:Target.WaitForReady>
@@ -618,14 +619,14 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="473.6,489.6" sap2010:WorkflowViewState.IdRef="Sequence_59">
+              <Sequence sap:VirtualizedContainerService.HintSize="474,485" sap2010:WorkflowViewState.IdRef="Sequence_59">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="432,101.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="432,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -645,10 +646,10 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:MultipleAssign>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="432,61.6" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;無&quot;+LV_BKTXT+&quot;相關資料或無GUI視窗&quot;]" />
-                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="站存並離開" sap:VirtualizedContainerService.HintSize="432,153.6" sap2010:WorkflowViewState.IdRef="SendHotkey_15" Key="esc" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="432,61" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;無&quot;+LV_BKTXT+&quot;相關資料或無GUI視窗&quot;]" />
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="站存並離開" sap:VirtualizedContainerService.HintSize="432,152" sap2010:WorkflowViewState.IdRef="SendHotkey_15" Key="esc" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
                   <ui:SendHotkey.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be4694af-3e67-47fe-81da-36ee5364c3b5" InformativeScreenshot="5a3afe21012c95f5401b265f20b29e2a" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='進項資料維護視窗' idx='*' /&gt;" TimeoutMS="2000">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be4694af-3e67-47fe-81da-36ee5364c3b5" InformativeScreenshot="5a3afe21012c95f5401b265f20b29e2a" Selector="&lt;wnd app='saplogon.exe' cls='#32770' idx='*' aaname='*進項資料維護視窗*' /&gt;" TimeoutMS="2000">
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
