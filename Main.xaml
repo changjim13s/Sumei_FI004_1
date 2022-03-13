@@ -81,7 +81,6 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -261,41 +260,19 @@
                               <av:PointCollection x:Key="ConnectorLocation">380,741.6 380,788.4</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="登入SAP" DisplayName="open_sap" sap:VirtualizedContainerService.HintSize="333.6,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="RPA_to_MIGO.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="登入SAP" DisplayName="open_sap" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="RPA_to_MIGO.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="GT_DATA">
-                                <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="GT_DATA" />
-                              </InOutArgument>
-                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="GT_HEAD">
-                                <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="GT_HEAD" />
-                              </InOutArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="ID">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ID" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="CLIENT">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CLIENT" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="CONNT_NAME">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CONNT_NAME" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="PASSWORD">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="PASSWORD" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="LANGU">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="langu" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="DB_NAME">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DB_NAME" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="TABLE_NAME">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TABLE_NAME" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="s:Exception" x:Key="ProcessError">
-                                <mva:VisualBasicValue x:TypeArguments="s:Exception" ExpressionText="ProcessError" />
-                              </InArgument>
-                              <OutArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">
-                                <mva:VisualBasicReference x:TypeArguments="ui:Window" ExpressionText="SAP_WIND" />
-                              </OutArgument>
+                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="GT_DATA">[GT_DATA]</InOutArgument>
+                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="GT_HEAD">[GT_HEAD]</InOutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="ID">[ID]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="CLIENT">[CLIENT]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="CONNT_NAME">[CONNT_NAME]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="PASSWORD">[PASSWORD]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="LANGU">[langu]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="DB_NAME">[DB_NAME]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="TABLE_NAME">[TABLE_NAME]</InArgument>
+                              <InArgument x:TypeArguments="s:Exception" x:Key="ProcessError">[ProcessError]</InArgument>
+                              <OutArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">[SAP_WIND]</OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1467,7 +1444,7 @@
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">600,14</av:Point>
+          <av:Point x:Key="ShapeLocation">580,14</av:Point>
           <av:Size x:Key="ShapeSize">200,52</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
