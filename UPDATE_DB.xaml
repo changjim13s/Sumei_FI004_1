@@ -8,11 +8,13 @@
     <x:Property Name="GV_BELNR" Type="InArgument(x:String)" />
     <x:Property Name="TABLE_NAME" Type="InArgument(x:String)" />
     <x:Property Name="CLIENT" Type="InArgument(x:String)" />
+    <x:Property Name="msg_text" Type="InArgument(x:String)" />
+    <x:Property Name="msg_type" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>675.2,682.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>811.2,682.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>UPDATE_DB_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -78,6 +80,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="UPDATE_DB" sap:VirtualizedContainerService.HintSize="524.8,617.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -107,7 +110,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:DatabaseConnect>
-          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[dbconn]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" Sql="[&quot;UPDATE [&quot;+DB_NAME+&quot;].[dbo].[&quot;+TABLE_NAME+&quot;] SET BELNR = '&quot;+GV_BELNR+&quot;'  WHERE MANDT = '&quot;+CLIENT+&quot;' AND BKTXT = '&quot;+LV_BKTXT+&quot;' ;&quot;]">
+          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[dbconn]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" Sql="[&quot;UPDATE [&quot;+DB_NAME+&quot;].[dbo].[&quot;+TABLE_NAME+&quot;] SET BELNR = '&quot;+GV_BELNR+&quot;'  ,RPAUPDATE_DATETIM = '&quot;+DateTime.Now.ToString+&quot;' , ERR_INFO = '&quot;+MSG_TEXT+&quot;' WHERE MANDT = '&quot;+CLIENT+&quot;' AND BKTXT = '&quot;+LV_BKTXT+&quot;' ;&quot;]">
             <ui:ExecuteNonQuery.Parameters>
               <scg:Dictionary x:TypeArguments="x:String, Argument" />
             </ui:ExecuteNonQuery.Parameters>
