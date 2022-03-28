@@ -292,13 +292,13 @@
                                   <av:PointCollection x:Key="ConnectorLocation">380,870.4 380,918.4</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="執行F-43 F-47" CurrentIndex="[ind_head]" DataTable="[GT_HEAD]" DisplayName="依BPM請款單號LOOP" sap:VirtualizedContainerService.HintSize="2086,24077" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                              <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="執行F-43 F-47" CurrentIndex="[ind_head]" DataTable="[GT_HEAD]" DisplayName="依BPM請款單號LOOP" sap:VirtualizedContainerService.HintSize="2086,23153" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                                 <ui:ForEachRow.Body>
                                   <ActivityAction x:TypeArguments="sd:DataRow">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="WA_HEAD" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2052,23926" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2052,23002" sap2010:WorkflowViewState.IdRef="Sequence_1">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="sd:DataTable" Name="lt_item" />
                                         <Variable x:TypeArguments="x:Int32" Name="SWITCH_FLAG" />
@@ -2539,12 +2539,12 @@
                                           </Sequence>
                                         </ui:CommentOut.Body>
                                       </ui:CommentOut>
-                                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="2010,16891" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
+                                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="2010,16479" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
                                         <ui:IfElseIf.ConditionBlocks>
                                           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                             <ui:IfElseIfBlock BlockType="If" Condition="[ONE_FLAG = &quot;N&quot; AND msg_type &lt;&gt;&quot;E&quot;]">
                                               <ui:IfElseIfBlock.Then>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="1959,16340" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="1959,15928" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="x:Int32" Default="0" Name="ind_wa" />
                                                   </Sequence.Variables>
@@ -4692,16 +4692,8 @@
                                                                         <If.Then>
                                                                           <Sequence sap:VirtualizedContainerService.HintSize="1087,1614" sap2010:WorkflowViewState.IdRef="Sequence_84">
                                                                             <Sequence.Variables>
-                                                                              <Variable x:TypeArguments="x:Int32" Name="ind_wa">
-                                                                                <Variable.Default>
-                                                                                  <Literal x:TypeArguments="x:Int32" />
-                                                                                </Variable.Default>
-                                                                              </Variable>
-                                                                              <Variable x:TypeArguments="x:Int32" Name="LV_IND">
-                                                                                <Variable.Default>
-                                                                                  <Literal x:TypeArguments="x:Int32" />
-                                                                                </Variable.Default>
-                                                                              </Variable>
+                                                                              <Variable x:TypeArguments="x:Int32" Default="0" Name="ind_wa" />
+                                                                              <Variable x:TypeArguments="x:Int32" Default="0" Name="LV_IND" />
                                                                               <Variable x:TypeArguments="sd:DataTable" Name="GUI_ERR_TAB" />
                                                                             </Sequence.Variables>
                                                                             <sap:WorkflowViewStateService.ViewState>
@@ -5225,6 +5217,12 @@
                                                                                         </ui:Target.WaitForReady>
                                                                                       </ui:Target>
                                                                                     </ucas:ClickToolbarButton.Target>
+                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                                      </scg:Dictionary>
+                                                                                    </sap:WorkflowViewStateService.ViewState>
                                                                                   </ucas:ClickToolbarButton>
                                                                                   <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" sap:VirtualizedContainerService.HintSize="432,68" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                     <ui:Click.CursorPosition>
@@ -5247,6 +5245,7 @@
                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                   </ui:Click>
@@ -5450,11 +5449,11 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:IfElseIf>
-                                                  <If Condition="[STRING.IsNullOrEmpty(ERR_INFO)]" sap:VirtualizedContainerService.HintSize="1917,463" sap2010:WorkflowViewState.IdRef="If_2">
+                                                  <If Condition="[STRING.IsNullOrEmpty(ERR_INFO)]" sap:VirtualizedContainerService.HintSize="1917,51" sap2010:WorkflowViewState.IdRef="If_2">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <If.Then>
@@ -5610,7 +5609,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:IfElseIf>
                                       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="2010,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[msg_type+&quot;:&quot;+msg_text]" />
-                                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="2010,2569" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="2010,2057" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
                                         <ui:IfElseIf.ConditionBlocks>
                                           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                             <ui:IfElseIfBlock BlockType="If" Condition="[msg_type = &quot;S&quot;]">
@@ -5759,14 +5758,14 @@
                                             </ui:IfElseIfBlock>
                                             <ui:IfElseIfBlock BlockType="ElseIf" Condition="[msg_type = &quot;W&quot;]">
                                               <ui:IfElseIfBlock.Then>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:InterruptibleDoWhile Condition="[msg_type = &quot;W&quot;]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="451,439" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                                                  <ui:InterruptibleDoWhile Condition="[msg_type = &quot;W&quot;]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                                                     <ui:InterruptibleDoWhile.Body>
                                                       <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                                         <sap:WorkflowViewStateService.ViewState>
@@ -5813,19 +5812,19 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:InterruptibleDoWhile>
-                                                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,1667" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+                                                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
                                                     <ui:IfElseIf.ConditionBlocks>
                                                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                                         <ui:IfElseIfBlock BlockType="If" Condition="[msg_type = &quot;S&quot;]">
                                                           <ui:IfElseIfBlock.Then>
-                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,696" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                                            <Sequence sap:VirtualizedContainerService.HintSize="305,635" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                              <Assign sap:VirtualizedContainerService.HintSize="263,60" sap2010:WorkflowViewState.IdRef="Assign_14">
                                                                 <Assign.To>
                                                                   <OutArgument x:TypeArguments="x:String">[GV_BELNR]</OutArgument>
                                                                 </Assign.To>
@@ -5833,8 +5832,8 @@
                                                                   <InArgument x:TypeArguments="x:String">[msg_data.GetValue(0).ToString]</InArgument>
                                                                 </Assign.Value>
                                                               </Assign>
-                                                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[GV_BELNR]" />
-                                                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[GV_BELNR]" />
+                                                              <Assign sap:VirtualizedContainerService.HintSize="263,60" sap2010:WorkflowViewState.IdRef="Assign_15">
                                                                 <Assign.To>
                                                                   <OutArgument x:TypeArguments="x:String">[LV_BKTXT]</OutArgument>
                                                                 </Assign.To>
@@ -5842,7 +5841,7 @@
                                                                   <InArgument x:TypeArguments="x:String">[WA_HEAD(0).ToString]</InArgument>
                                                                 </Assign.Value>
                                                               </Assign>
-                                                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_50">
+                                                              <Assign sap:VirtualizedContainerService.HintSize="263,60" sap2010:WorkflowViewState.IdRef="Assign_50">
                                                                 <Assign.To>
                                                                   <OutArgument x:TypeArguments="x:String">[msg_text]</OutArgument>
                                                                 </Assign.To>
@@ -5852,7 +5851,7 @@
                                                                   </InArgument>
                                                                 </Assign.Value>
                                                               </Assign>
-                                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke UPDATE_DB workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="UPDATE_DB.xaml">
+                                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke UPDATE_DB workflow" sap:VirtualizedContainerService.HintSize="263,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="UPDATE_DB.xaml">
                                                                 <ui:InvokeWorkflowFile.Arguments>
                                                                   <InArgument x:TypeArguments="x:String" x:Key="DATA_SOURCE">[DATA_SOURCE]</InArgument>
                                                                   <InArgument x:TypeArguments="x:String" x:Key="DB_NAME">[DB_NAME]</InArgument>
@@ -5871,7 +5870,7 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                               </ui:InvokeWorkflowFile>
-                                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke UPDATE_DB(ZBPM_GUI) workflow" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="UPDATE_DB(ZBPM_GUI).xaml">
+                                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke UPDATE_DB(ZBPM_GUI) workflow" sap:VirtualizedContainerService.HintSize="263,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="UPDATE_DB(ZBPM_GUI).xaml">
                                                                 <ui:InvokeWorkflowFile.Arguments>
                                                                   <InArgument x:TypeArguments="x:String" x:Key="DATA_SOURCE">[DATA_SOURCE]</InArgument>
                                                                   <InArgument x:TypeArguments="x:String" x:Key="DB_NAME">[DB_NAME]</InArgument>
@@ -5884,13 +5883,19 @@
                                                                   <InArgument x:TypeArguments="x:String" x:Key="GUI_FLAG">[GUI_FLAG]</InArgument>
                                                                   <InArgument x:TypeArguments="x:String" x:Key="GUI_ERR">[GUI_ERR]</InArgument>
                                                                 </ui:InvokeWorkflowFile.Arguments>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
                                                               </ui:InvokeWorkflowFile>
                                                             </Sequence>
                                                           </ui:IfElseIfBlock.Then>
                                                         </ui:IfElseIfBlock>
                                                         <ui:IfElseIfBlock BlockType="ElseIf" Condition="[msg_type = &quot;E&quot;]">
                                                           <ui:IfElseIfBlock.Then>
-                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,657" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                                            <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -5960,20 +5965,20 @@
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:IfElseIf>
                                                 </Sequence>
                                               </ui:IfElseIfBlock.Then>
                                             </ui:IfElseIfBlock>
-                                            <ui:IfElseIfBlock BlockType="ElseIf" Condition="[msg_type = &quot;&quot; AND err_info &lt;&gt; &quot;&quot;]">
+                                            <ui:IfElseIfBlock BlockType="Else">
                                               <ui:IfElseIfBlock.Then>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="376,657" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_22">
